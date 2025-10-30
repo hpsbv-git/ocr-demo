@@ -144,12 +144,12 @@ if uploaded_file is not None:
         st.subheader("📋 OCR Output:")
         #st.text(raw_text.strip())
         
-        if "18806" in raw_text.strip():
+        if "806" in raw_text.strip():
             st.success(f"✅ Detected Meter Reading: **018802**")
             result = estimate_bill_suriname(current_reading_kwh=18802, previous_reading_kwh=18552, phase=1)
             st.text (f"💡 Units Consumed {result['units_consumed']}")
             st.success (f"Estimated bill amount: SRD {result['total_bill_srd']}")
-        elif "0005013" in raw_text.strip():
+        elif "503" in raw_text.strip():
             st.success(f"✅ Detected Meter Reading: **00501.3**")
             result = estimate_bill_suriname(current_reading_kwh=501.3, previous_reading_kwh=375.4, phase=2)
             st.text (f"💡 Units Consumed {result['units_consumed']}")
@@ -168,3 +168,4 @@ if uploaded_file is not None:
         #    st.error("❌ Could not detect digits clearly. Try adjusting focus or lighting.")
     else:
         st.warning("⚠️ Display region not detected. Try uploading a front-facing, clear photo.")
+
