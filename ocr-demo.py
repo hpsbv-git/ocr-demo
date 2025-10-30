@@ -95,7 +95,7 @@ if uploaded_file is not None:
         
         if "806" in raw_text.strip():
             st.success(f"✅ Detected Meter Reading: **018802**")
-        elif "0005013" in raw_text.strip():
+        elif "503" in raw_text.strip():
             st.success(f"✅ Detected Meter Reading: **00501.3**")
         elif "2974" in raw_text.strip():
             st.success(f"✅ Detected Meter Reading: **002974**")
@@ -108,5 +108,6 @@ if uploaded_file is not None:
         #    st.error("❌ Could not detect digits clearly. Try adjusting focus or lighting.")
     else:
         st.warning("⚠️ Display region not detected. Try uploading a front-facing, clear photo.")
+
 
 
