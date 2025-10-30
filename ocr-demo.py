@@ -91,7 +91,7 @@ if uploaded_file is not None:
         reading = max(matches, key=len) if matches else None
 
         st.subheader("📋 OCR Output:")
-        #st.text(raw_text.strip())
+        st.text(raw_text.strip())
         
         if "18806" in raw_text.strip():
             st.success(f"✅ Detected Meter Reading: **018802**")
@@ -108,3 +108,4 @@ if uploaded_file is not None:
         #    st.error("❌ Could not detect digits clearly. Try adjusting focus or lighting.")
     else:
         st.warning("⚠️ Display region not detected. Try uploading a front-facing, clear photo.")
+
