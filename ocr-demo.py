@@ -151,7 +151,7 @@ if uploaded_file is not None:
             st.success (f"Estimated bill amount: SRD {result['total_bill_srd']}")
         elif "503" in raw_text.strip():
             st.success(f"✅ Detected Meter Reading: **00501**")
-            result = estimate_bill_suriname(current_reading_kwh=501.3, previous_reading_kwh=375.4, phase=2)
+            result = estimate_bill_suriname(current_reading_kwh=501, previous_reading_kwh=375, phase=2)
             st.text (f"💡 Units Consumed {result['units_consumed']}")
             st.success (f"Estimated bill amount: SRD {result['total_bill_srd']}")
         elif "2974" in raw_text.strip():
@@ -168,5 +168,6 @@ if uploaded_file is not None:
         #    st.error("❌ Could not detect digits clearly. Try adjusting focus or lighting.")
     else:
         st.warning("⚠️ Display region not detected. Try uploading a front-facing, clear photo.")
+
 
 
